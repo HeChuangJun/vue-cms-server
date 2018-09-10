@@ -27,6 +27,7 @@ import com.junye.vo.ImageVo;
 public class CommentsController {
 	@Autowired
 	private CommentsService commentsService;
+	
 	@RequestMapping("/getcomments/{artid}/{pageindex}")
 	public Map<String, Object> getImages(@PathVariable Integer artid,@PathVariable Integer pageindex,HttpServletResponse rsq){
 		Map<String, Object> map = new HashMap<String, Object>();
