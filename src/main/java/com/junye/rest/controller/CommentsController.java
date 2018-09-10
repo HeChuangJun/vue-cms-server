@@ -33,7 +33,7 @@ public class CommentsController {
 		List<CommentVo> images = commentsService.getcomments(artid,pageindex);
 		map.put("status", 0);
 		map.put("message", images);
-		rsq.setHeader("Access-Control-Allow-Origin", "*"); 
+		rsq.setHeader("Access-Control-Allow-Origin", "*");  
 		return map;
 	}
 	
