@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -31,12 +32,20 @@ public class LunboController {
 	public Map<String,Object> getLunbo(HttpServletRequest req,HttpServletResponse rsq){
 		Map<String,Object> map = new HashMap<String, Object>();
 		List<ImgVo> lunbo = lunboService.getLunbo();
-		Map<String,Object> map2 = new HashMap<String, Object>();
-		
-		//map2.put("url", lunbo);
-		
+		Map<String,Object> map2 = new HashMap<String, Object>();		
 		map.put("status", 0);
 		map.put("message", lunbo);
+		rsq.setHeader("Access-Control-Allow-Origin", "*"); 
+		return map;
+	}
+	
+	@RequestMapping("/getthumimages/{imgid}")
+	public Map<String,Object> getthumimagesById(@PathVariable("imgid") String imgid,HttpServletRequest req,HttpServletResponse rsq){
+		Map<String,Object> map = new HashMap<String, Object>();
+		String[] images = lunboService.getthumimagesById(imgid);
+		Map<String,Object> map2 = new HashMap<String, Object>();		
+		map.put("status", 0);
+		map.put("message", images);
 		rsq.setHeader("Access-Control-Allow-Origin", "*"); 
 		return map;
 	}

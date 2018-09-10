@@ -14,4 +14,6 @@ import com.junye.vo.ImgVo;
 */
 public interface LunboMapper {
 	List<ImgVo> getLunbo();
+
+	String[] getthumimagesById(String imgid);
 }

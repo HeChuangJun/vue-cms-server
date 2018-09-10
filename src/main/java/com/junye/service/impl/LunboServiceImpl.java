@@ -24,5 +24,11 @@ public class LunboServiceImpl implements LunboService{
 		List<ImgVo> lunbo = lunboMapper.getLunbo();
 		return lunbo;
 	}
+	@Override
+	public String[] getthumimagesById(String imgid) {
+		// TODO Auto-generated method stub
+		String[] images= lunboMapper.getthumimagesById(imgid);
+		return images;
+	}
 
 }

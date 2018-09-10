@@ -11,4 +11,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	<select id="getLunbo" resultType="com.junye.vo.ImgVo">
 		SELECT * FROM `img`
 	</select>
+	<select id="getthumimagesById" resultType="String">
+		SELECT * FROM `img` where id = #{imgid}
+	</select>
 </mapper>

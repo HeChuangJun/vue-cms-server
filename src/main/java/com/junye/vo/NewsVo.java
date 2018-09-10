@@ -8,17 +8,25 @@ import java.util.Date;
 * 类说明 :
 */
 public class NewsVo {
-	private String id;
+	private Integer id;
 	private String title;
 	private Date add_time;
 	private String zhaiyao;
 	private String img_url;
 	private String click;
+	private String content;
 	
-	public String getId() {
+	public String getContent() {
+		return content;
+	}
+	public void setContent(String content) {
+		this.content = content;
+	}
+
+	public Integer getId() {
 		return id;
 	}
-	public void setId(String id) {
+	public void setId(Integer id) {
 		this.id = id;
 	}
 	public String getTitle() {
