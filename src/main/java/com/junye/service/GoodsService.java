@@ -17,4 +17,6 @@ public interface GoodsService {
 
 	GoodsVo getinfo(Integer id);
 
+	GoodsVo getdesc(Integer id);
+
 }

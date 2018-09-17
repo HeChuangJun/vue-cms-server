@@ -9,7 +9,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	<!-- resultType:声明输出结果的类型，应该填写pojo的全路径 -->
 	<!-- #{}：输入参数的占位符，相当于jdbc的？ -->
 	<select id="getgoods" resultType="com.junye.vo.GoodsVo">
-		SELECT * FROM `goods` limit #{pageindex},10
+		SELECT * FROM `goods` order by id limit #{pageindex},10 
 	</select>
 	<select id="getshopcarlist" resultType="com.junye.vo.GoodsVo">
 		SELECT * FROM `shopcar` where id in
@@ -20,5 +20,8 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	</select>
 	<select id="getinfo" resultType="com.junye.vo.GoodsVo">
 		SELECT * FROM `goods` where id=#{id}
+	</select>
+		<select id="getdesc" resultType="com.junye.vo.GoodsVo">
+		SELECT title,content FROM `goods` where id=#{id}
 	</select>
 </mapper>

@@ -9,7 +9,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	<!-- resultType:声明输出结果的类型，应该填写pojo的全路径 -->
 	<!-- #{}：输入参数的占位符，相当于jdbc的？ -->
 	<select id="getcomments" resultType="com.junye.vo.CommentVo">
-		SELECT * FROM `comment` where id = #{arg0} limit ${arg1},10
+		SELECT * FROM `comment` where id = #{artid} limit ${pageindex},10
 	</select>
 	<insert id="CommentVo" parameterType="com.junye.vo.CommentVo">
 		insert into `comment` values ( ${user_name},${add_time},${content},${id}  )

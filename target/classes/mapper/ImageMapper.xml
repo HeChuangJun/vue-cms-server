@@ -9,12 +9,12 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	<!-- resultType:声明输出结果的类型，应该填写pojo的全路径 -->
 	<!-- #{}：输入参数的占位符，相当于jdbc的？ -->
 	<select id="getImages" resultType="com.junye.vo.ImageVo">
-		SELECT * FROM `images` where id = #{cateid}
+		SELECT * FROM `images` where cateid = #{cateid}
 	</select>
 	<select id="getImgcategory" resultType="com.junye.vo.NewsVo">
 		SELECT title,id FROM `imgcategory`
 	</select>
 	<select id="getimageInfoById" resultType="com.junye.vo.ImageVo">
-		SELECT title,id,click,add_time,content FROM `images`
+		SELECT title,id,click,add_time,content FROM `images` where id=#{imgid}
 	</select>
 </mapper>

@@ -56,4 +56,14 @@ public class GoodsController {
 		rsq.setHeader("Access-Control-Allow-Origin", "*"); 
 		return map;
 	}
+	
+	@RequestMapping("/goods/getdesc/{id}")
+	public Map<String, Object> getdesc(@PathVariable Integer id,HttpServletResponse rsq){
+		Map<String, Object> map = new HashMap<String, Object>();
+		GoodsVo goodlistGoodsVos=goodsService.getdesc(id);
+		map.put("status", 0);
+		map.put("message", goodlistGoodsVos);
+		rsq.setHeader("Access-Control-Allow-Origin", "*"); 
+		return map;
+	}
 }

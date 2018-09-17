@@ -25,9 +25,9 @@ public class LunboServiceImpl implements LunboService{
 		return lunbo;
 	}
 	@Override
-	public String[] getthumimagesById(String imgid) {
+	public List<ImgVo> getthumimagesById(String imgid) {
 		// TODO Auto-generated method stub
-		String[] images= lunboMapper.getthumimagesById(imgid);
+		List<ImgVo> images= lunboMapper.getthumimagesById(imgid);
 		return images;
 	}
 

@@ -37,5 +37,11 @@ public class GoodsServiceImpl implements GoodsService{
 		GoodsVo goodsVo=goodsMapper.getinfo(id);
 		return goodsVo;
 	}
+	@Override
+	public GoodsVo getdesc(Integer id) {
+		// TODO Auto-generated method stub
+		GoodsVo goodsVo=goodsMapper.getdesc(id);
+		return goodsVo;
+	}
 
 }

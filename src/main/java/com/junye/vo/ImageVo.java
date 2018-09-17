@@ -1,4 +1,7 @@
 package com.junye.vo;
+
+import java.util.Date;
+
 /** 
 * @author 作者 junye E-mail: 1105128664@qq.com
 * @version 创建时间：2018年9月4日 
@@ -9,7 +12,28 @@ public class ImageVo {
 	private String title;
 	private String img_url;
 	private String zhaiyao;
-
+	private String content;
+	private Date add_time;
+	private String click;
+	
+	public String getClick() {
+		return click;
+	}
+	public void setClick(String click) {
+		this.click = click;
+	}
+	public String getContent() {
+		return content;
+	}
+	public void setContent(String content) {
+		this.content = content;
+	}
+	public Date getAdd_time() {
+		return add_time;
+	}
+	public void setAdd_time(Date add_time) {
+		this.add_time = add_time;
+	}
 	public Integer getId() {
 		return id;
 	}

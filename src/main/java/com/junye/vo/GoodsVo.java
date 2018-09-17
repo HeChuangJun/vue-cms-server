@@ -18,7 +18,28 @@ public class GoodsVo {
 	private String market_price;
 	private String stock_quantity;
 	private String content;
-	private String good_no;
+	private String goods_no;
+	private String thumb_path;
+	private String cou;
+	
+	public String getThumb_path() {
+		return thumb_path;
+	}
+	public void setThumb_path(String thumb_path) {
+		this.thumb_path = thumb_path;
+	}
+	public String getCou() {
+		return cou;
+	}
+	public void setCou(String cou) {
+		this.cou = cou;
+	}
+	public Integer getId() {
+		return id;
+	}
+	public void setId(Integer id) {
+		this.id = id;
+	}
 	public String getTitle() {
 		return title;
 	}
@@ -73,11 +94,12 @@ public class GoodsVo {
 	public void setContent(String content) {
 		this.content = content;
 	}
-	public String getGood_no() {
-		return good_no;
+	public String getGoods_no() {
+		return goods_no;
 	}
-	public void setGood_no(String good_no) {
-		this.good_no = good_no;
+	public void setGoods_no(String goods_no) {
+		this.goods_no = goods_no;
 	}
+
 	
 }

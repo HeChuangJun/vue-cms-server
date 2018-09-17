@@ -10,6 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.junye.service.CommentsService;
@@ -38,13 +39,14 @@ public class CommentsController {
 		return map;
 	}
 	
-	@RequestMapping("/postcomment")
+	@RequestMapping(value="/postcomment",method = {RequestMethod.POST,RequestMethod.GET})
 	public Map<String, Object> postcomment(@RequestBody CommentVo commentVo,HttpServletResponse rsq){
+		System.out.println("CommentsController.postcomment()");
 		Map<String, Object> map = new HashMap<String, Object>();
 		commentsService.postcomment(commentVo);
 		map.put("status", 0);
 		map.put("message", "提交评论成功");
-		rsq.setHeader("Access-Control-Allow-Origin", "*"); 
+		//rsq.setHeader("Access-Control-Allow-Origin", "*"); 
 		return map;
 	}
 }

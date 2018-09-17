@@ -17,4 +17,6 @@ public interface GoodsMapper {
 
 	GoodsVo getinfo(Integer id);
 
+	GoodsVo getdesc(Integer id);
+
 }

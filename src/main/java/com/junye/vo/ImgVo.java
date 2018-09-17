@@ -6,14 +6,16 @@ package com.junye.vo;
 * 类说明 :
 */
 public class ImgVo {
-	private String url;
+	private String src;
 
-	public String getUrl() {
-		return url;
+	public String getSrc() {
+		return src;
 	}
 
-	public void setUrl(String url) {
-		this.url = url;
+	public void setSrc(String src) {
+		this.src = src;
 	}
+
+
 	
 }

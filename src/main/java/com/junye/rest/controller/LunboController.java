@@ -42,7 +42,7 @@ public class LunboController {
 	@RequestMapping("/getthumimages/{imgid}")
 	public Map<String,Object> getthumimagesById(@PathVariable("imgid") String imgid,HttpServletRequest req,HttpServletResponse rsq){
 		Map<String,Object> map = new HashMap<String, Object>();
-		String[] images = lunboService.getthumimagesById(imgid);
+		List<ImgVo> images = lunboService.getthumimagesById(imgid);
 		Map<String,Object> map2 = new HashMap<String, Object>();		
 		map.put("status", 0);
 		map.put("message", images);
